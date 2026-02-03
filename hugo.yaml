@@ -3,13 +3,15 @@ languageCode: 'pt-BR'
 title: 'Ogibeonita'
 theme: 'PaperMod'
 
+# Configurações de nível raiz (movidas de pagination)
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
 pagination:
   pagerSize: 5
-  enableInlineShortcodes: true
-  enableRobotsTXT: true
-  buildDrafts: false
-  buildFuture: false
-  buildExpired: false
 
 minify:
   disableXML: true

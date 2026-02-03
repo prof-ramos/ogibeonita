@@ -8,7 +8,7 @@ Blog pessoal criado com Hugo e tema PaperMod.
 hugo server -D
 ```
 
-Acesse http://localhost:1313
+Acesse <http://localhost:1313>
 
 ## CMS
 
