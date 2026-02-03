@@ -1,0 +1,117 @@
+baseURL = "https://seu-usuario.github.io/ogibeonita/"
+languageCode = "pt-BR"
+title = "Ogibeonita"
+theme = "PaperMod"
+
+# Configurações básicas
+paginate = 5
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Minificação
+[minify]
+disableXML = true
+minifyOutput = true
+
+# Cache de imagens (necessário para GitHub Pages)
+[caches.images]
+dir = ":cacheDir/images"
+
+# Parâmetros do PaperMod (documentação oficial)
+[params]
+env = "production"  # habilita opengraph, twitter-cards e schema
+title = "Ogibeonita"
+description = "Meu blog pessoal"
+keywords = ["blog", "hugo", "papermod"]
+author = "Seu Nome"
+images = ["/images/og-image.png"]
+DateFormat = "2 de janeiro de 2006"
+defaultTheme = "auto"  # dark, light, auto
+disableThemeToggle = false
+
+# Opções de exibição
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+ShowFullTextinRSS = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+# Assets (favicon)
+[params.assets]
+favicon = "favicon.ico"
+favicon16x16 = "favicon-16x16.png"
+favicon32x32 = "favicon-32x32.png"
+apple_touch_icon = "apple-touch-icon.png"
+
+# Label do menu
+[params.label]
+text = "Home"
+icon = "/apple-touch-icon.png"
+iconHeight = 35
+
+# Informações da home
+[params.homeInfoParams]
+Title = "Olá, mundo! 👋"
+Content = "Bem-vindo ao meu blog pessoal criado com Hugo e PaperMod."
+
+# Ícones sociais
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/seu-usuario"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/seu-usuario"
+
+# Menu de navegação
+[[menu.main]]
+identifier = "categorias"
+name = "Categorias"
+url = "/categorias/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "arquivo"
+name = "Arquivo"
+url = "/arquivo/"
+weight = 30
+
+# Taxonomias
+[taxonomies]
+category = "categorias"
+tag = "tags"
+archive = "arquivo"
+
+# Outputs
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+# Configuração de markup (syntax highlight do Hugo)
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # permite HTML no markdown

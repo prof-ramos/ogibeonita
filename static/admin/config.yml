@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Configuração de mídia
+media_folder: "static/images"
+public_folder: "/images"
+
+# URL do site
+site_url: https://seu-usuario.github.io/ogibeonita/
+display_url: https://seu-usuario.github.io/ogibeonita/
+
+# Configuração de slug
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "posts/{{year}}/{{month}}/{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime", format: "2006-01-02T15:04:05Z07:00"}
+      - {label: "Rascunho", name: "draft", widget: "boolean", default: false}
+      - {label: "Imagem de Capa", name: "cover", widget: "image", required: false}
+      - {label: "Alt da Imagem", name: "coverAlt", widget: "string", required: false}
+      - {label: "Descrição", name: "description", widget: "string", required: false}
+      - {label: "Categorias", name: "categories", widget: "list", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Mostrar Tabela de Conteúdos", name: "toc", widget: "boolean", default: true}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Páginas"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Rascunho", name: "draft", widget: "boolean", default: false}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
