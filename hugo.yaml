@@ -1,0 +1,110 @@
+baseURL: 'https://prof-ramos.github.io/ogibeonita/'
+languageCode: 'pt-BR'
+title: 'Ogibeonita'
+theme: 'PaperMod'
+
+pagination:
+  pagerSize: 5
+  enableInlineShortcodes: true
+  enableRobotsTXT: true
+  buildDrafts: false
+  buildFuture: false
+  buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+caches:
+  images:
+    dir: ':cacheDir/images'
+
+params:
+  env: 'production'
+  title: 'Ogibeonita'
+  description: 'Meu blog pessoal'
+  keywords:
+    - 'blog'
+    - 'hugo'
+    - 'papermod'
+  author: 'Seu Nome'
+  images:
+    - '/images/og-image.png'
+  DateFormat: '2 de janeiro de 2006'
+  defaultTheme: 'auto'
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  assets:
+    favicon: 'favicon.ico'
+    favicon16x16: 'favicon-16x16.png'
+    favicon32x32: 'favicon-32x32.png'
+    apple_touch_icon: 'apple-touch-icon.png'
+  label:
+    text: 'Home'
+    icon: '/apple-touch-icon.png'
+    iconHeight: 35
+  homeInfoParams:
+    Title: 'Olá, mundo! 👋'
+    Content: 'Bem-vindo ao meu blog pessoal criado com Hugo e PaperMod.'
+  socialIcons:
+    - name: 'github'
+      url: 'https://github.com/prof-ramos'
+    - name: 'twitter'
+      url: 'https://twitter.com/seu-usuario'
+
+menu:
+  main:
+    - identifier: 'categorias'
+      name: 'Categorias'
+      url: '/categorias/'
+      weight: 10
+    - identifier: 'tags'
+      name: 'Tags'
+      url: '/tags/'
+      weight: 20
+    - identifier: 'arquivo'
+      name: 'Arquivo'
+      url: '/arquivo/'
+      weight: 30
+
+taxonomies:
+  category: 'categorias'
+  tag: 'tags'
+  archive: 'arquivo'
+
+outputs:
+  home:
+    - 'HTML'
+    - 'RSS'
+    - 'JSON'
+  section:
+    - 'HTML'
+    - 'RSS'
+  taxonomy:
+    - 'HTML'
+    - 'RSS'
+  term:
+    - 'HTML'
+    - 'RSS'
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
