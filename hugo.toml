@@ -4,7 +4,8 @@ title = "Ogibeonita"
 theme = "PaperMod"
 
 # Configurações básicas
-paginate = 5
+[pagination]
+pagerSize = 5
 enableInlineShortcodes = true
 enableRobotsTXT = true
 buildDrafts = false

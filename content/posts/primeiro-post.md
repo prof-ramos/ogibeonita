@@ -2,8 +2,6 @@
 title: "Meu Primeiro Post com Hugo e PaperMod"
 date: 2026-02-03T10:00:00-03:00
 draft: false
-cover: images/cover.jpg
-coverAlt: "Imagem ilustrativa"
 description: "Primeiro post do blog criado com Hugo, PaperMod e Decap CMS."
 categories: ["Tecnologia"]
 tags: ["hugo", "papermod", "webdev"]
