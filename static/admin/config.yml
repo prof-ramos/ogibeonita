@@ -7,8 +7,8 @@ media_folder: "static/images"
 public_folder: "/images"
 
 # URL do site
-site_url: https://seu-usuario.github.io/ogibeonita/
-display_url: https://seu-usuario.github.io/ogibeonita/
+site_url: https://prof-ramos.github.io/ogibeonita/
+display_url: https://prof-ramos.github.io/ogibeonita/
 
 # Configuração de slug
 slug:
